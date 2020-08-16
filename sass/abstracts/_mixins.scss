@@ -1,0 +1,35 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+
+    display: "table";
+    clear: both;
+  }
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// MEDIA QUERY MANAGER
+
+/*
+<600 Phone
+
+<900 tab potrait
+
+<1200 tab landscape
+
+
+
+1800 big
+*/
+
+@mixin respond-phone {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
